@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android Tutorial</string>
+    <string name="MainActivity_editText">Enter a message</string>
+    <string name="MainActivity_sendButton">Send</string>
 </resources>
