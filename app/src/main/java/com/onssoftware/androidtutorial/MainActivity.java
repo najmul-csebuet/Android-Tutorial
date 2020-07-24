@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String key = "com.onssoftware.androidtutorial.message";
+    public static final String EXTRA_MESSAGE = "com.onssoftware.androidtutorial.message";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = findViewById(R.id.MainActivity_editText);
-        intent.putExtra(key, editText.getText().toString());
+        intent.putExtra(EXTRA_MESSAGE, editText.getText().toString());
         startActivity(intent);
     }
 }

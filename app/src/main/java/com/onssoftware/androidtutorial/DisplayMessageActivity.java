@@ -2,6 +2,7 @@ package com.onssoftware.androidtutorial;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -13,6 +14,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_message);
 
         TextView textView = findViewById(R.id.DisplayMessageActivity_textView);
-        textView.setText(getIntent().getExtras().getString(MainActivity.key));
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        textView.setText(message);
     }
 }
